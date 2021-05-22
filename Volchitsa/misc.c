@@ -1,6 +1,7 @@
 #include "stdio.h"
 #include "defs.h"
-#include <winsock.h>
+
+#define WIN32 //uhhhhhhhhh
 
 #ifdef WIN32
 #include "windows.h"
