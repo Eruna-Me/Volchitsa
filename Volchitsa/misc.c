@@ -1,5 +1,6 @@
 #include "stdio.h"
 #include "defs.h"
+#include <winsock.h>
 
 #ifdef WIN32
 #include "windows.h"
@@ -24,11 +25,11 @@ int InputWaiting()
   fd_set readfds;
   struct timeval tv;
   FD_ZERO (&readfds);
-  FD_SET (fileno(stdin), &readfds);
+  FD_SET (_fileno(stdin), &readfds);
   tv.tv_sec=0; tv.tv_usec=0;
   select(16, &readfds, 0, 0, &tv);
 
-  return (FD_ISSET(fileno(stdin), &readfds));
+  return (FD_ISSET(_fileno(stdin), &readfds));
 #else
    static int init = 0, pipe;
    static HANDLE inh;
@@ -60,7 +61,7 @@ void ReadInput(S_SEARCHINFO *info) {
     if (InputWaiting()) {    
 		info->stopped = 1;
 		do {
-		  bytes=read(fileno(stdin),input,256);
+		  bytes=read(_fileno(stdin),input,256);
 		} while (bytes<0);
 		endc = strchr(input,'\n');
 		if (endc) *endc=0;
