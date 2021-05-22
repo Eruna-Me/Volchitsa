@@ -18,6 +18,31 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="attack.c" />
+    <ClCompile Include="bitboards.c" />
+    <ClCompile Include="board.c" />
+    <ClCompile Include="data.c" />
+    <ClCompile Include="endgame.c" />
+    <ClCompile Include="evaluate.c" />
+    <ClCompile Include="hashkeys.c" />
+    <ClCompile Include="init.c" />
+    <ClCompile Include="io.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="makemove.c" />
+    <ClCompile Include="misc.c" />
+    <ClCompile Include="movegen.c" />
+    <ClCompile Include="perft.c" />
+    <ClCompile Include="pvtable.c" />
+    <ClCompile Include="search.c" />
+    <ClCompile Include="uci.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="defs.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Readme.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,31 +163,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="D:\Chess\Volchitsa-master\attack.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\bitboards.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\board.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\data.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\endgame.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\evaluate.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\hashkeys.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\init.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\io.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\main.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\makemove.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\misc.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\movegen.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\perft.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\pvtable.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\search.c" />
-    <ClCompile Include="D:\Chess\Volchitsa-master\uci.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Chess\Volchitsa-master\defs.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="D:\Chess\Volchitsa-master\Readme.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

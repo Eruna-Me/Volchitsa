@@ -15,64 +15,64 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Chess\Volchitsa-master\attack.c">
+    <ClCompile Include="attack.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\bitboards.c">
+    <ClCompile Include="bitboards.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\board.c">
+    <ClCompile Include="board.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\data.c">
+    <ClCompile Include="data.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\endgame.c">
+    <ClCompile Include="endgame.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\evaluate.c">
+    <ClCompile Include="evaluate.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\hashkeys.c">
+    <ClCompile Include="hashkeys.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\init.c">
+    <ClCompile Include="init.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\io.c">
+    <ClCompile Include="io.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\main.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\makemove.c">
+    <ClCompile Include="makemove.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\misc.c">
+    <ClCompile Include="misc.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\movegen.c">
+    <ClCompile Include="movegen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\perft.c">
+    <ClCompile Include="perft.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\pvtable.c">
+    <ClCompile Include="pvtable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\search.c">
+    <ClCompile Include="search.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Chess\Volchitsa-master\uci.c">
+    <ClCompile Include="uci.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="D:\Chess\Volchitsa-master\Readme.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="D:\Chess\Volchitsa-master\defs.h">
+    <ClInclude Include="defs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Readme.txt" />
   </ItemGroup>
 </Project>

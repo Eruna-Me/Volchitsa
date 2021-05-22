@@ -1,0 +1,2 @@
+Volchitsa is a chess engine made by Hidde Bartelink. Most code is original but it contains pieces of modified Vice code.
+Special thanks to Bluefeversoft and the Chessprogramming wiki, without their instructive material I wouldn't have known how to program a chess engine.
