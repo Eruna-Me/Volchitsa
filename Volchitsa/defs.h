@@ -50,6 +50,12 @@ enum {WKCA = 1, WQCA = 2, BKCA = 4, BQCA = 8 };
 
 typedef struct
 {
+	int score;
+	int isEndgame;
+} S_EndgameEval;
+
+typedef struct
+{
 	int move;
 	int score;
 } S_MOVE ;
@@ -334,6 +340,6 @@ extern void Uci_Loop();
 
 // endgame.c
 
-extern float EvalEndgame(const S_BOARD *pos);
+extern S_EndgameEval EvalEndgame(const S_BOARD *pos);
 
 #endif

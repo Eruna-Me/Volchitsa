@@ -211,15 +211,17 @@ void InitBlackPSQT()
 int EvalPosition(const S_BOARD *pos) 
 {
 	int sq;
-	float endgamescore = EvalEndgame(pos);
+	S_EndgameEval endgameEval = EvalEndgame(pos);
 
-	if(endgamescore != -0.5)
+	if(endgameEval.isEndgame == 1)
 	{
 		if(pos->side == WHITE) 
 		{
-			return endgamescore;
-		} else {
-			return -endgamescore;
+			return endgameEval.score;
+		} 
+		else 
+		{
+			return -endgameEval.score;
 		}
 	}
 
