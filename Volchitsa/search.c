@@ -108,7 +108,7 @@ static int Quiescence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info)
 	int Legal = 0;
 	int OldAlpha = alpha;
 	int BestMove = 0;
-	Score = -INFINITE;
+	Score = -INFINITEx;
 	int PvMove = ProbePvMove(pos);
 	
 	for(MoveNum = 0; MoveNum < list->count; ++MoveNum) {	
@@ -173,7 +173,7 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 		depth++;
 	}
 	
-	int Score = -INFINITE;
+	int Score = -INFINITEx;
 	int PvMove = NOMOVE;
 	
 	if( ProbeHashEntry(pos, &PvMove, &Score, alpha, beta, depth) == 1)
@@ -201,8 +201,8 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 	int Legal = 0;
 	int OldAlpha = alpha;
 	int BestMove = 0;
-	Score = -INFINITE;
-	int BestScore = -INFINITE;
+	Score = -INFINITEx;
+	int BestScore = -INFINITEx;
 	
 	
 	if (PvMove != 0 )
@@ -306,7 +306,7 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 	
 	if(Legal == 0) {
 		if(SqAttacked(pos->KingSq[pos->side],pos->side^1,pos)) {
-			return -INFINITE + pos->ply;
+			return -INFINITEx + pos->ply;
 		} else {
 			return 0;
 		}
@@ -324,7 +324,7 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info) 
 {
 	int bestMove = 0;
-	int bestScore = -INFINITE;
+	int bestScore = -INFINITEx;
 	int currentDepth = 0;
 	int pvMoves = 0;
 	int pvNum = 0;
@@ -334,7 +334,7 @@ void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info)
 	// iterative deepening
 	for( currentDepth = 1; currentDepth <= info->depth; ++currentDepth ) {
 							// alpha	 beta
-		bestScore = AlphaBeta(-INFINITE, INFINITE, currentDepth, pos, info, 1);
+		bestScore = AlphaBeta(-INFINITEx, INFINITEx, currentDepth, pos, info, 1);
 		
 		if(info->stopped == 1) {
 			break;

@@ -109,8 +109,6 @@ void Uci_Loop() {
     setbuf(stdout, NULL);
 	
 	char line[INPUTBUFFER];
-
-	
 	
     S_BOARD pos[1];
 	S_SEARCHINFO info[1] = { { 0 } };

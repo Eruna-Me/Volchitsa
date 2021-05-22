@@ -208,12 +208,11 @@ void InitBlackPSQT()
 
 #define MAX_MAT (2 * PieceVal[wR] + 2 * PieceVal[wN] + 2 * PieceVal[wB] + 8 * PieceVal[wP] + PieceVal[wQ] + 2 * PieceVal[bR] + 2 * PieceVal[bN] + 2 * PieceVal[bB] + 8 * PieceVal[bP] + PieceVal[bQ])
 
-int EvalPosition(const S_BOARD *pos) {
-
-	int pce;
-	int pceNum;
+int EvalPosition(const S_BOARD *pos) 
+{
 	int sq;
 	float endgamescore = EvalEndgame(pos);
+
 	if(endgamescore != -0.5)
 	{
 		if(pos->side == WHITE) 
@@ -223,6 +222,7 @@ int EvalPosition(const S_BOARD *pos) {
 			return -endgamescore;
 		}
 	}
+
 	int score = pos->material[WHITE] - pos->material[BLACK];
 	int GamePhase = (((pos->material[WHITE] + pos->material[BLACK] - PieceVal[wK] - PieceVal [bK])  * 1024)  / MAX_MAT);
 	int ReverseGamePhase = 1024 - GamePhase;

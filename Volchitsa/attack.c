@@ -1,13 +1,7 @@
 #include "defs.h"
 
-
-//const int BiDir[4] = { -7, -9, 7, 9 };
-
-
 int SqAttacked(const int sq, const int side, const S_BOARD *pos)
 {
-	int pce, i, t_sq, dir;
-	
 	if(side == WHITE && WhitePawnAttack[sq] & pos->pieceBB[P][WHITE])
 	{
 			return 1;
@@ -39,7 +33,6 @@ int SqAttacked(const int sq, const int side, const S_BOARD *pos)
 		}
 	}
 	
-	return 0;
-	
+	return 0;	
 }
 	

@@ -33,8 +33,8 @@ typedef unsigned long long U64;
 
 #define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
-#define INFINITE 30000
-#define ISMATE (INFINITE - MAXDEPTH)
+#define INFINITEx 30000
+#define ISMATE (INFINITEx - MAXDEPTH)
 
 //ENUMS
 
@@ -296,7 +296,7 @@ extern int ParseMove(char *ptrChar, S_BOARD *pos);
 extern void GenerateAllMoves(  const S_BOARD *pos, S_MOVELIST *list );
 extern void GenerateAllCaps(  const S_BOARD *pos,  S_MOVELIST *list );
 extern int MoveExists(S_BOARD *pos, const int move);
-extern int InitMvvLva();
+extern void InitMvvLva();
 
 //  makemove.c
 
