@@ -155,6 +155,6 @@ void Uci_Loop() {
 			printf("Set Contempt to %d\n",Contempt);
 			Contempt = 0-Contempt;
 		}
-		if(info->quit) break;
+		//if(info->quit) break;
     }
 }
