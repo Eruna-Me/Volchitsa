@@ -113,7 +113,7 @@ void Uci_Loop() {
 	
 	
     S_BOARD pos[1];
-    S_SEARCHINFO info[1];   
+	S_SEARCHINFO info[1] = { { 0 } };
     InitHashTable(pos->HashTable);
 	
 	while (1) {
@@ -155,6 +155,6 @@ void Uci_Loop() {
 			printf("Set Contempt to %d\n",Contempt);
 			Contempt = 0-Contempt;
 		}
-		//if(info->quit) break;
+		if(info->quit) break;
     }
 }
