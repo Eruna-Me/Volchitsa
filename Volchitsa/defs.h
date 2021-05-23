@@ -4,10 +4,7 @@
 
 #include "stdlib.h"
 
-
-//#define DEBUG
-
-#ifndef DEBUG
+#ifndef _DEBUG
 #define ASSERT(n)
 #else
 #define ASSERT(n) \
@@ -312,7 +309,10 @@ extern void MakeNullMove(S_BOARD *pos);
 extern void TakeNullMove(S_BOARD *pos);
 
 // perft.c
-extern void PerftTest(int depth, S_BOARD *pos);
+extern long PerftTest(int depth, S_BOARD *pos, int print);
+
+// perftTests.c
+extern void RunAllPerftTests();
 
 // search.c
 extern void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info);
