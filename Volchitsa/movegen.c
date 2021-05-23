@@ -127,7 +127,7 @@ static void AddBlackPawnMove( const S_BOARD *pos, const int from, const int to, 
 
 
 void GenerateAllMoves(  const S_BOARD *pos,  S_MOVELIST *list )	{
-	//ASSERT(CheckBoard(pos));
+	ASSERT(CheckBoard(pos));
 	list->count = 0;	
 	int pce = EMPTY;
 	int side = pos->side;
@@ -899,7 +899,7 @@ void GenerateAllMoves(  const S_BOARD *pos,  S_MOVELIST *list )	{
 	}
 }
 void GenerateAllCaps(  const S_BOARD *pos,  S_MOVELIST *list )	{
-	//ASSERT(CheckBoard(pos));
+	ASSERT(CheckBoard(pos));
 	list->count = 0;	
 	int pce = EMPTY;
 	int side = pos->side;

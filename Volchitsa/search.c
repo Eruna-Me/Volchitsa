@@ -76,7 +76,7 @@ static void ClearForSearch(S_BOARD *pos, S_SEARCHINFO *info)
 
 static int Quiescence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info)
 {
-	//ASSERT(CheckBoard(pos));
+	ASSERT(CheckBoard(pos));
 	
 	if(( info->nodes & 2047 ) == 0) {
 		CheckUp(info);
@@ -141,7 +141,7 @@ static int Quiescence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info)
 
 static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO *info, int DoNull)
 {
-	//ASSERT(CheckBoard(pos)); 
+	ASSERT(CheckBoard(pos)); 
 	
 	if(depth == 0) {
 		return Quiescence(alpha, beta, pos, info);
