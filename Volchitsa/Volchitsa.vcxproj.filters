@@ -79,6 +79,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Readme.txt" />
+    <Text Include="Readme.md" />
   </ItemGroup>
 </Project>

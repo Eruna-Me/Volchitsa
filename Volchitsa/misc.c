@@ -1,16 +1,14 @@
 #include "stdio.h"
 #include "defs.h"
 
-#define WIN32 //uhhhhhhhhh
-
-#ifdef WIN32
+#ifdef _WIN32
 #include "windows.h"
 #else
 #include "time.h"
 #endif
 
 int GetTimeMs() { 
-#ifdef WIN32
+#ifdef _WIN32
   return GetTickCount();
 #else
   struct timeval t;
@@ -22,7 +20,7 @@ int GetTimeMs() {
 // http://home.arcor.de/dreamlike/chess/
 int InputWaiting()
 {
-#ifndef WIN32
+#ifndef _WIN32
   fd_set readfds;
   struct timeval tv;
   FD_ZERO (&readfds);
