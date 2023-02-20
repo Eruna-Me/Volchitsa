@@ -1,4 +1,4 @@
-An old chess engine I originally wrote by following some (but not all to my own demise) of the instructions of Bluefeversofts programming a chess engine in C tutorial series: LINK 
+An old chess engine I originally wrote by following some (but not all to my own demise) of the instructions of Bluefeversofts programming a chess engine in C tutorial series: https://www.youtube.com/watch?v=bGAfaepBco4&list=PLZ1QII7yudbc-Ky058TEaOstZHVbT-2hg 
 Which was my first significant step in learning programming.
 
 It currently builds succesfully on Windows with Visualstudio. Haven't tested whether it still works on Linux yet, will do so in the future. 
