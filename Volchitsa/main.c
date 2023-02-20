@@ -8,6 +8,12 @@
 
 int main() {	
 
+#ifdef _DEBUG
+
+	RunAllPerftTests();
+
+#endif // DEBUG
+
 	AllInit();		
 	
 	Uci_Loop();

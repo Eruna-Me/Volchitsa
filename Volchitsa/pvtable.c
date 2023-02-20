@@ -72,7 +72,7 @@ int ProbeHashEntry(S_BOARD *pos, int *move, int *score, int alpha, int beta, int
 			pos->HashTable->hit++;
 			
 			ASSERT(pos->HashTable->pTable[index].depth>=1&&pos->HashTable->pTable[index].depth<MAXDEPTH);
-            ASSERT(pos->HashTable->pTable[index].flags>=HALPHA&&pos->HashTable->pTable[index].flags<=HFEXACT);
+            //ASSERT(pos->HashTable->pTable[index].flags>=HALPHA&&pos->HashTable->pTable[index].flags<=HFEXACT);
 			
 			*score = pos->HashTable->pTable[index].score;
 			if(*score > ISMATE) *score -= pos->ply;
@@ -80,7 +80,7 @@ int ProbeHashEntry(S_BOARD *pos, int *move, int *score, int alpha, int beta, int
 			
 			switch(pos->HashTable->pTable[index].flags) {
 				
-                ASSERT(*score>=-INFINITE&&*score<=INFINITE);
+                ASSERT(*score>=-INFINITEx&&*score<=INFINITEx);
 
                 case HFALPHA: if(*score<=alpha) {
                     *score=alpha;

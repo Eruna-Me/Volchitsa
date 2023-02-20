@@ -4,7 +4,7 @@
 
 #define INPUTBUFFER 400 * 6
 	
-int MaxDepth = 64;
+int MaxDepth = 63;
 int Contempt = 0;
 
 void ParseGo(char* line, S_SEARCHINFO *info, S_BOARD *pos) {
@@ -61,7 +61,7 @@ void ParseGo(char* line, S_SEARCHINFO *info, S_BOARD *pos) {
 	} 
 	
 	if(depth == -1) {
-		info->depth = MAXDEPTH;
+		info->depth = MAXDEPTH -1;
 	}
 	
 	printf("time:%d start:%d stop:%d depth:%d timeset:%d\n",
@@ -109,11 +109,9 @@ void Uci_Loop() {
     setbuf(stdout, NULL);
 	
 	char line[INPUTBUFFER];
-
-	
 	
     S_BOARD pos[1];
-    S_SEARCHINFO info[1];   
+	S_SEARCHINFO info[1] = { { 0 } };
     InitHashTable(pos->HashTable);
 	
 	while (1) {
@@ -148,7 +146,7 @@ void Uci_Loop() {
         } else if (!strncmp(line, "setoption name MaxDepth value ", 30)) {			
 			sscanf(line,"%*s %*s %*s %*s %d",&MaxDepth);
 			if(MaxDepth < 1) MaxDepth = 1;
-			if(MaxDepth > 64) MaxDepth = 64;
+			if(MaxDepth > 63) MaxDepth = 63;
 			printf("Set MaxDepth to %d\n",MaxDepth);
 		} else if (!strncmp(line, "setoption name Contempt value ", 30)) {			
 			sscanf(line,"%*s %*s %*s %*s %d",&Contempt);

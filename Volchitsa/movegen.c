@@ -9,7 +9,7 @@ const int mBiDir[4] = { -7, -9, 7, 9 };
 const int VictimScore[13] = { 0, 100, 200, 300, 400, 500, 600, 100, 200, 300, 400, 500, 600 };
 static int MvvLvaScores[13][13];
 
-int InitMvvLva() {
+void InitMvvLva() {
 	int Attacker;
 	int Victim;
 	for(Attacker = wP; Attacker <= bK; ++Attacker) {
@@ -127,7 +127,7 @@ static void AddBlackPawnMove( const S_BOARD *pos, const int from, const int to, 
 
 
 void GenerateAllMoves(  const S_BOARD *pos,  S_MOVELIST *list )	{
-	//ASSERT(CheckBoard(pos));
+	ASSERT(CheckBoard(pos));
 	list->count = 0;	
 	int pce = EMPTY;
 	int side = pos->side;
@@ -899,7 +899,7 @@ void GenerateAllMoves(  const S_BOARD *pos,  S_MOVELIST *list )	{
 	}
 }
 void GenerateAllCaps(  const S_BOARD *pos,  S_MOVELIST *list )	{
-	//ASSERT(CheckBoard(pos));
+	ASSERT(CheckBoard(pos));
 	list->count = 0;	
 	int pce = EMPTY;
 	int side = pos->side;

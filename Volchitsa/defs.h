@@ -4,10 +4,7 @@
 
 #include "stdlib.h"
 
-
-//#define DEBUG
-
-#ifndef DEBUG
+#ifndef _DEBUG
 #define ASSERT(n)
 #else
 #define ASSERT(n) \
@@ -33,8 +30,8 @@ typedef unsigned long long U64;
 
 #define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
-#define INFINITE 30000
-#define ISMATE (INFINITE - MAXDEPTH)
+#define INFINITEx 30000
+#define ISMATE (INFINITEx - MAXDEPTH)
 
 //ENUMS
 
@@ -47,6 +44,12 @@ enum { WHITE, BLACK, BOTH };
 enum {WKCA = 1, WQCA = 2, BKCA = 4, BQCA = 8 };
 
 //STRUCTS
+
+typedef struct
+{
+	int score;
+	int isEndgame;
+} S_EndgameEval;
 
 typedef struct
 {
@@ -296,7 +299,7 @@ extern int ParseMove(char *ptrChar, S_BOARD *pos);
 extern void GenerateAllMoves(  const S_BOARD *pos, S_MOVELIST *list );
 extern void GenerateAllCaps(  const S_BOARD *pos,  S_MOVELIST *list );
 extern int MoveExists(S_BOARD *pos, const int move);
-extern int InitMvvLva();
+extern void InitMvvLva();
 
 //  makemove.c
 
@@ -306,7 +309,10 @@ extern void MakeNullMove(S_BOARD *pos);
 extern void TakeNullMove(S_BOARD *pos);
 
 // perft.c
-extern void PerftTest(int depth, S_BOARD *pos);
+extern long PerftTest(int depth, S_BOARD *pos, int print);
+
+// perftTests.c
+extern void RunAllPerftTests();
 
 // search.c
 extern void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info);
@@ -334,6 +340,6 @@ extern void Uci_Loop();
 
 // endgame.c
 
-extern float EvalEndgame(const S_BOARD *pos);
+extern S_EndgameEval EvalEndgame(const S_BOARD *pos);
 
 #endif

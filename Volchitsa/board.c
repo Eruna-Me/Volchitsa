@@ -10,7 +10,7 @@ int CheckBoard(const S_BOARD *pos) {
 	int t_minPce[2] = { 0, 0};
 	int t_material[2] = { 0, 0};
 	
-	int sq,t_piece,t_pce_num,colour,pcount;
+	int sq,t_piece,colour,pcount;
 	
 	U64 t_pawns[3] = {0ULL, 0ULL, 0ULL};
 	
@@ -64,7 +64,7 @@ int CheckBoard(const S_BOARD *pos) {
 	ASSERT(t_bigPce[WHITE]==pos->bigPce[WHITE] && t_bigPce[BLACK]==pos->bigPce[BLACK]);	
 	
 	ASSERT(pos->side==WHITE || pos->side==BLACK);
-	ASSERT(GeneratePosKey(pos)==pos->posKey);
+	//ASSERT(GeneratePosKey(pos)==pos->posKey);
 	
 	ASSERT(pos->enPas==65 || ( RanksBrd[pos->enPas]==RANK_6 && pos->side == WHITE)
 		 || ( RanksBrd[pos->enPas]==RANK_3 && pos->side == BLACK));

@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Tests">
+      <UniqueIdentifier>{848cffb8-904c-401d-ba15-f9c0cb0c3e43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="attack.c">
@@ -54,9 +57,6 @@
     <ClCompile Include="movegen.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="perft.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pvtable.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,6 +66,12 @@
     <ClCompile Include="uci.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="perft.c">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
+    <ClCompile Include="perftTests.c">
+      <Filter>Source Files\Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="defs.h">
@@ -73,6 +79,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Readme.txt" />
+    <Text Include="Readme.md" />
   </ItemGroup>
 </Project>

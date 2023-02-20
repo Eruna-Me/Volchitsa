@@ -294,7 +294,7 @@ void InitEvalMasks() {
 
 void InitPieceAttackMasks()
 {
-	int sq, tsq, r, f;
+	int sq, tsq;
 	
 	for(sq = 0; sq < 64; ++sq)
 	{
@@ -478,7 +478,7 @@ void InitPieceAttackMasks()
 void InitAttackMasks()
 {
 	
-	int sq, tsq, r, f;
+	int sq, tsq;
 		
 	for(sq = 0; sq < 64; ++sq) {
 		WhitePawnAttack[sq] =0ULL;

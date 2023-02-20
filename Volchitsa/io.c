@@ -88,7 +88,7 @@ void PrintMoveList(const S_MOVELIST *list) {
 	int index = 0;
 	int score = 0;
 	int move = 0;
-	printf("MoveList:\n",list->count);
+	printf("MoveList:\n");
 	
 	for(index = 0; index < list->count; ++index) {
 	
